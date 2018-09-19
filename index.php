@@ -11,22 +11,28 @@ $page_title = "Home page";
 <html>
   <head>
     <?php include("includes/head.php"); ?>
-
   </head>
     <body>
       <?php include("includes/navbar.php"); ?>
       <?php include("includes/banner.php"); ?>
+      <?php include("includes/products.php"); ?>
       
       
-      <div class="container">
+     
+      
+      
+      <?php include("includes/content.php"); ?>
+      <?php include("includes/gelato.php"); ?>
+      
+      <div id="flavour" class="container">
         <!-- Project Section -->
       <div class="w3-container w3-padding-32" id="projects">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Products</h3>
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Flavours</h3>
       </div>
         <?php
           echo "<div class=\"row\">
                 <div class=\"col navbar\">
-                  <p class=\"navbar-text\">Total of $total_items products</p>
+                  <p class=\"navbar-text\">Total of $total_items flavours</p>
                 </div>
               </div>";
           if( count($products) > 0 ){
@@ -46,9 +52,9 @@ $page_title = "Home page";
               echo "<div class=\"card\">";
               
               echo "<img class=\"product-thumbnail img-fluid\" src=\"images/products/$image\" style=\"width:100%\">";
-              echo "<h4 class=\"product-name\">$name</h4>";
-              echo "<h4 class=\"price\">$price</h4>
-              <p style=\"margin:0;\"><button id=\"contactbutton\" onclick=\"window.location.href='productdetails.php?product_id=$id'\">View Details</button></p>
+              echo "<br /><h5 class=\"product-name\">$name</h5>";
+              echo "
+              <p style=\"margin:0;\"></p>
               </div><p></p></div>";
     
               if($counter == 4){
@@ -59,5 +65,12 @@ $page_title = "Home page";
           }
         ?>
       </div>
+      <hr>
+      </div>
+    <?php include("includes/specification.php"); ?>  
+    <?php include("includes/about.php"); ?> 
+    <?php include("includes/contact.php"); ?> 
+    <?php include("includes/footer.php"); ?> 
     </body>
+    
 </html>

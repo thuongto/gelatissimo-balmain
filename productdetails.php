@@ -9,7 +9,6 @@ if( isset($_GET["product_id"]) ){
   $product = $product_detail -> product;
   
   $product_name = $product[0]["name"];
-  $product_price = $product[0]["price"];
   $product_description = $product[0]["description"];
 }
 else{
@@ -81,9 +80,7 @@ $page_title = $product_name;
           <h2 class="product-name">
             <?php echo $product_name; ?>
           </h2>
-          <p class="price">
-            <?php echo $product_price; ?>
-          </p>
+          
           <p class="description">
             <?php echo $product_description; ?>
           </p>

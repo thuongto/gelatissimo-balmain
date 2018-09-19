@@ -46,7 +46,7 @@ $page_title = "Products List";
               
               echo "<img class=\"product-thumbnail img-fluid\" src=\"images/products/$image\" style=\"width:100%\">";
               echo "<h4 class=\"product-name\">$name</h4>";
-              echo "<h4 class=\"price\">$price</h4>
+              echo "
               <p style=\"margin:0;\"><button id=\"contactbutton\" onclick=\"window.location.href='productdetails.php?product_id=$id'\">View Me</button></p>
               </div><p></p></div>";
     
